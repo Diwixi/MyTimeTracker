@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_margin="8dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <TextView
+            android:id="@+id/timeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="10sp"
+            tools:text="timer title"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/startContainer"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/startContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@color/design_default_color_primary_dark"
+            app:layout_constraintTop_toBottomOf="@+id/timeTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/endContainer"
+    >
+
+        <Button
+                android:id="@+id/startTimeEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35dp"
+                android:hint="00:00"
+        />
+
+        <ImageView
+                android:id="@+id/startTimerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_timer"
+                android:padding="20dp"
+                android:background="@color/design_default_color_primary"
+                app:layout_constraintStart_toEndOf="@id/startTimeEt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/endContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary_dark"
+            app:layout_constraintTop_toTopOf="@+id/startContainer"
+            app:layout_constraintStart_toEndOf="@id/startContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+    >
+
+        <Button
+                android:id="@+id/endTimeEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35dp"
+                android:hint="00:00"
+        />
+
+        <ImageView
+                android:id="@+id/endTimerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_timer"
+                android:padding="20dp"
+                android:background="@color/design_default_color_primary"
+                app:layout_constraintStart_toEndOf="@id/endTimeEt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+            android:id="@+id/differenceTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="123"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/endContainer"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
